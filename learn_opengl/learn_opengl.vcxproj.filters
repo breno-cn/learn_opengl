@@ -21,6 +21,9 @@
     <ClCompile Include="gl.c">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
+    <ClCompile Include="shader\Shader.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\GLFW\glfw3.h">
@@ -35,5 +38,12 @@
     <ClInclude Include="include\KHR\khrplatform.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
+    <ClInclude Include="include\Shader.hpp">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shader\sources\shader.vs" />
+    <None Include="shader\sources\shader.fs" />
   </ItemGroup>
 </Project>
