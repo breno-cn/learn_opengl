@@ -128,11 +128,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="gui\App.cpp" />
     <ClCompile Include="gl.c" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="shader\Shader.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\App.hpp" />
     <ClInclude Include="include\glad\gl.h" />
     <ClInclude Include="include\GLFW\glfw3.h" />
     <ClInclude Include="include\GLFW\glfw3native.h" />

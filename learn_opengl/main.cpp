@@ -1,6 +1,7 @@
 #include <glad/gl.h>
 #include <GLFW/glfw3.h>
 
+#include <App.hpp>
 #include <Shader.hpp>
 
 #include <iostream>
@@ -16,28 +17,7 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
 }
 
 int main() {
-	glfwInit();
-
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-
-	GLFWwindow* window = glfwCreateWindow(800, 600, "LearnOpenGL", NULL, NULL);
-	if (window == NULL) {
-		std::cout << "Failed to create GLFW window" << std::endl;
-		glfwTerminate();
-		return -1;
-	}
-
-	glfwMakeContextCurrent(window);
-
-	if (!gladLoaderLoadGL()) {
-		std::cout << "Failed to initialize GLAD" << std::endl;
-		return -1;
-	}
-
-	glViewport(0, 0, 800, 600);
-	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+	App app("LearnOpenGL", 800, 600);
 
 	Shader shader("shader/sources/shader.vs", "shader/sources/shader.fs");
 	float vertices[] = {
@@ -62,9 +42,9 @@ int main() {
 	// color attribute
 	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
 	glEnableVertexAttribArray(1);
-	while (!glfwWindowShouldClose(window)) {
+	while (!app.shouldClose()) {
 		// input
-		processInput(window);
+		app.processInput();
 
 		// render
 		// clear the colorbuffer
@@ -77,10 +57,8 @@ int main() {
 		glDrawArrays(GL_TRIANGLES, 0, 3);
 
 		// swap buffers and poll IO events
-		glfwPollEvents();
-		glfwSwapBuffers(window);
+		app.poolEvents();
 	}
 
-	glfwTerminate();
 	return 0;
 }
