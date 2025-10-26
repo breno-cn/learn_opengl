@@ -132,6 +132,7 @@
     <ClCompile Include="gl.c" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="shader\Shader.cpp" />
+    <ClCompile Include="stb.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\App.hpp" />
@@ -140,10 +141,17 @@
     <ClInclude Include="include\GLFW\glfw3native.h" />
     <ClInclude Include="include\KHR\khrplatform.h" />
     <ClInclude Include="include\Shader.hpp" />
+    <ClInclude Include="include\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="shader\sources\shader.fs" />
     <None Include="shader\sources\shader.vs" />
+    <None Include="shader\sources\texture_fragment.fs" />
+    <None Include="shader\sources\texture_vertex.vs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\textures\awesomeface.png" />
+    <Image Include="resources\textures\container.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

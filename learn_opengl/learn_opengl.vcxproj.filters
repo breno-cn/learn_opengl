@@ -27,6 +27,9 @@
     <ClCompile Include="gui\App.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
+    <ClCompile Include="stb.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\GLFW\glfw3.h">
@@ -47,9 +50,22 @@
     <ClInclude Include="include\App.hpp">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
+    <ClInclude Include="include\stb_image.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="shader\sources\shader.vs" />
     <None Include="shader\sources\shader.fs" />
+    <None Include="shader\sources\texture_fragment.fs" />
+    <None Include="shader\sources\texture_vertex.vs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\textures\container.jpg">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="resources\textures\awesomeface.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
   </ItemGroup>
 </Project>
