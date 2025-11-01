@@ -106,6 +106,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -133,6 +134,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="shader\Shader.cpp" />
     <ClCompile Include="stb.cpp" />
+    <ClCompile Include="texture\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\App.hpp" />
@@ -142,6 +144,7 @@
     <ClInclude Include="include\KHR\khrplatform.h" />
     <ClInclude Include="include\Shader.hpp" />
     <ClInclude Include="include\stb_image.h" />
+    <ClInclude Include="include\Texture.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="shader\sources\shader.fs" />
